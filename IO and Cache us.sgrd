@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet columns="1" locked="0" interval="0.5" rows="4" title="I/O &amp; Cache">
+ <host name="localhost" port="-1" shell="" command="ksysguardd"/>
+ <display stacked="0" unit="" vDistance="30" hLines="1" autoRange="1" hScale="6" columnSpan="1" vScroll="0" class="FancyPlotter" vLines="0" column="0" title="Main Disk" version="1" svgBackground="" fontSize="8" labels="1" manualRange="0" showUnit="0" row="0" rowSpan="1">
+  <beam regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sda[1-9]+|mmcblk\d+)_.*/Rate/rblk" color="0xff0057ae" hostName="localhost" sensorType="float"/>
+  <beam regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sda[1-9]+|mmcblk\d+)_.*/Rate/wblk" color="0xffe20800" hostName="localhost" sensorType="float"/>
+ </display>
+ <display stacked="0" unit="" vDistance="30" hLines="1" autoRange="1" hScale="6" columnSpan="1" vScroll="0" class="FancyPlotter" vLines="0" column="0" title="Reading and Writing on any storage device(Main Disk or USB)" version="1" svgBackground="" fontSize="8" labels="1" manualRange="0" showUnit="0" row="1" rowSpan="1">
+  <beam sensorType="float" summationName="Reads" regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/rblk" hostName="localhost" color="0xff0057ae"/>
+  <beam sensorType="float" summationName="Writes" regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/wblk" hostName="localhost" color="0xffe20800"/>
+ </display>
+ <display stacked="1" unit="" vDistance="30" hLines="1" autoRange="1" hScale="6" columnSpan="1" vScroll="0" class="FancyPlotter" vLines="0" column="0" title="Used Memory" version="1" svgBackground="" fontSize="8" labels="1" manualRange="0" showUnit="0" row="2" rowSpan="1">
+  <beam sensorName="mem/physical/used" color="0xff0057ae" hostName="localhost" sensorType="integer"/>
+  <beam sensorName="mem/physical/buf" color="0xffe20800" hostName="localhost" sensorType="integer"/>
+  <beam sensorName="mem/physical/cached" color="0xfff3c300" hostName="localhost" sensorType="integer"/>
+ </display>
+ <display stacked="0" unit="" vDistance="30" hLines="1" autoRange="1" hScale="6" columnSpan="1" vScroll="0" class="FancyPlotter" vLines="0" column="0" title="Cache" version="1" svgBackground="" fontSize="8" labels="1" manualRange="0" showUnit="0" row="3" rowSpan="1">
+  <beam sensorName="mem/cache/dirty" color="0xff0057ae" hostName="localhost" sensorType="integer"/>
+  <beam sensorName="mem/cache/writeback" color="0xffe20800" hostName="localhost" sensorType="integer"/>
+ </display>
+</WorkSheet>

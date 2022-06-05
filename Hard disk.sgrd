@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet title="Hard Disk Totals" interval="0.5" locked="0" rows="1" columns="1" >
+  <host port="-1" command="ksysguardd" shell="" name="localhost" />
+  <display bColor="0xffffffff" title="Hard Disk Totals" hScale="6" svgBackground="" fontColor="0xff000000" max="6780.340575" vLines="1" hColor="0xff888888" labels="1" autoRange="1" min="0" vDistance="30" fontSize="8" vScroll="1" column="0" unit="" vColor="0xff888888" hLines="1" showUnit="0" class="FancyPlotter" row="0" >
+    <beam sensorType="float" hostName="localhost" regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/rblk" summationName="Reads" color="0xff0057ae" />
+    <beam sensorType="float" hostName="localhost" regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/wblk" summationName="Writes" color="0xffe20800" />
+  </display>
+</WorkSheet>
