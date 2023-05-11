@@ -6,7 +6,7 @@
   <beam sensorType="float" hostName="localhost" regexpSensorName="cpu/cpu.*/TotalLoad" color="0xffff8000,0xffe20800" />
  </display>
  <display title="Memory and Swap History" svgBackground="widgets/plot-background" hScale="6" column="0" row="1" showUnit="0" manualRange="0" vDistance="30" rowSpan="1" svgBackground="" version="1" hLines="1" columnSpan="1" unit="" fontSize="8" class="FancyPlotter" labels="1" stacked="0" vLines="0" autoRange="1" vScroll="0">
-  <beam summationName="Memory" sensorName="mem/physical/application" sensorType="integer" hostName="localhost" color="0xffc000c0" />
+  <beam summationName="Memory" sensorName="mem/physical/allocated" sensorType="integer" hostName="localhost" color="0xffc000c0" />
   <beam summationName="Swap" sensorName="mem/swap/used" sensorType="integer" hostName="localhost" color="0xff00c000" />
  </display>
  <display title="Network History" svgBackground="widgets/plot-background" hScale="6" column="1" row="1" showUnit="0" manualRange="0" vDistance="30" rowSpan="1" svgBackground="" version="1" hLines="1" columnSpan="1" unit="" fontSize="8" class="FancyPlotter" labels="1" stacked="0" vLines="0" autoRange="1" vScroll="0">
